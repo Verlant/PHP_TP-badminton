@@ -33,6 +33,9 @@ include 'head.php'
         $page = 'actu';
     }
     switch ($page) {
+        case "":
+            include 'content/index_content.php';
+            break;
         case 'actu':
             include 'content/index_content.php';
             break;
@@ -47,7 +50,7 @@ include 'head.php'
             break;
         default:
             // include 'content/404.html';
-            header("Location: http://localhost/PHP/badminton/content/404.html");
+            header("Location: content/404.html");
             die();
             break;
     }
