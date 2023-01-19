@@ -29,13 +29,10 @@ include 'head.php'
     // equipe
     // stages
     // creneaux
-    if (!isset($page)) {
+    if (!isset($page) or empty($page)) {
         $page = 'actu';
     }
     switch ($page) {
-        case "":
-            include 'content/index_content.php';
-            break;
         case 'actu':
             include 'content/index_content.php';
             break;
